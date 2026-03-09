@@ -1,20 +1,286 @@
-/* Seletor */
+:root {
+    --primary-color: #96BB7C;
+    --light-color: #ffffff;
+    --fade-secundary-color: #DDF4FF;
+    --brand-log: #252B42;
+    --second-text-color: #737373;
+    --hover-text-color:#272935;
+    --hover-btn-color: #414c3a;
+    --gray-color: #FAFAFA;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+/* Font personalizada */
+@font-face {
+    font-family: peppersauce;
+    src: url(../font/pepper-sauce.ttf);
+}
+
+@font-face {
+    font-family: displayfont;
+    src: url(../font/PlayfairDisplayfont_wght.ttf);
+}
+
+@font-face {
+    font-family: lavi;
+    src: url(../font/LavishlyYours-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Section Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: var(--fade-secundary-color);
+    
+    /* font-family: "Macondo", cursive;
+    font-weight: 400;
+    font-style: normal; */
+
+    font-family: displayfont;
+
+    /* box-shadow: 1px 2px 9px #b4b4b4;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; */
+}
+
+.logo a {
+    font-size: 1.5rem;
+    color: var(--brand-log);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.item-link {
+    text-decoration: none;
+    color: var(--second-text-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.item-link:hover {
+    color: var(--hover-text-color);
+}
+
+.nav-auth {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    gap: 25px;
+}
+
+.btn-login {
+    text-decoration: none;
+    color:var(--primary-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color:var(--light-color);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background-color: var(--hover-btn-color);
+}
+
+/* Secttion Main */
+.trust {
+    background-color: var(--fade-secundary-color);
+    padding: 40px 10% 0;
+    min-height: 68vh;
+    /* display: flex;
+    align-items: center; */
+}
+
+.images-tecnology {
+    background-color: rgba(0, 137, 179, 0);
+    background-image: url(../images/ellipse.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.anime {
+    transition-property: transform;
+    transition-duration: 2ms;
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg);
+    transform-origin: 0%;
+}
+
+.single {
+    position: absolute;
+    left: -50px;
+    top: 250px;
+    z-index: 2;
+}
+
+.single:hover, .scores:hover, .global-statics:hover {
+    transform: rotate(10deg);
+    transform-origin: 100%;
+    cursor: pointer;
+}
+
+.scores {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.global-statics {
+    position: absolute;
+    right: -80px;
+    bottom: 150px;
+    z-index: 3;
+}
+
+.trust .container {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.best-dental {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+
+    text-shadow: 1px 1px 1px #000;
+    transition-property: text-shadow;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+
+
+.best-dental:hover {
+    text-shadow: 2px 1px 2px #000;
+    cursor: pointer;
+}
+
+
+
+/* Seletor class */
 /* .logotipo {
-    color:purple
+    color:blueviolet;
 } */
 
- .amarelo {
-    color: yellow;
- }
+/* Seletor ID */
+/* #logo {
+    color: var(--cor-azul);
+} */
 
- .azul {
+/* Seletor Elemento */
+/* div {
     color: blue;
- }
+} */
 
- .verde {
-    color: green;
- }
+/* p.rt1 {
+    font-size: 5px;
+}
 
-   .roxo {
-    color: blueviolet;
- }
+a[data-impacta="home"] {
+    font-size: 10px;
+    color: red;
+} */
+
+
+/* Footer */
+.footer .fields, .footer .footer-fields {
+    padding: 20px 10%;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer .container .top-footer, .footer .container .footer-fields{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .bottom-footer {
+    background-color: var(--gray-color);
+    border-top: var(--second-text-color) 1px solid;
+
+}
+
+.footer .field {
+    font-weight: bold;
+}
+
+.footer ul li {
+    line-height: 1.5rem;
+}
+
+.footer .redesociais {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer svg {
+    width: 30px;
+    color: #d61414
+}
